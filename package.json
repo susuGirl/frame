@@ -1,0 +1,16 @@
+{
+  "name": "demoframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config config/webpack.prod.js",
+    "start": "webpack-dev-server --config config/webpack.dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-merge": "^4.1.4"
+  }
+}
