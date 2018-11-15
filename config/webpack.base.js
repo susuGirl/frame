@@ -12,7 +12,15 @@ module.exports = {
     // filename: "bundle.js" // 打包后输出文件的文件名
     filename: "[name].js" // 打包后输出文件的文件名与入口文件名一致
   },
-  module: {}, // 模块：栗子 解读css，图片如何转换、压缩
+  module: { // 模块：栗子 解读css，图片如何转换、压缩
+    rules:[
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, 
+        loader: "babel-loader"
+      }
+    ]
+  },
   plugins: [
     new HtmlwebpackPlugin({ // 在build目录下自动生成index.html
       title: '', // 指定其title
