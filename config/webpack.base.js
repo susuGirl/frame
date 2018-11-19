@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     new HtmlwebpackPlugin({ // 在build目录下自动生成index.html
       title: '', // 指定其title
-      template: './src/index.html', // 指定要打包的html路径和文件名
+      template: 'ejs-compiled-loader!./src/index.html', // 指定要打包的html路径和文件名
       filename: 'index.html', // 指定输出路径和文件名
       chunks: ['main1'], // 页面中所需要的js
       minify: {
