@@ -2,7 +2,7 @@
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base')
 
-const devWebpackConfig = merge(baseWebpackConfig.clientConfig, {
+const serverWebpackConfig = merge(baseWebpackConfig.serverConfig, {
   mode: 'production', // 生产环境
 })
-module.exports = devWebpackConfig
+module.exports = serverWebpackConfig

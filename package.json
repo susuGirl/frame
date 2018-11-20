@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config config/webpack.prod.js",
+    "build": "webpack --config config/webpack.prod.js && webpack --config config/webpack.server.js",
+    "buildServer": "webpack --config config/webpack.server.js",
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "ssh": "scp -r dist suyingxue@hpc.mofanglicai.com.cn:/home/suyingxue/wwwroot/web/rank"
   },
@@ -23,7 +24,8 @@
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
     "babel-core": "^6.26.3",

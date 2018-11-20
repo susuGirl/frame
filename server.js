@@ -11,15 +11,15 @@ import App from './src/views/App'
 const app = new Koa();
 
 // 将dist文件夹设置为静态路径
-app.use(require('koa-static')(__dirname + '/dist'))
+app.use(require('koa-static')('./dist'))
 // 将ejs设置为我们的模板引擎
-app.use(views(path.resolve(__dirname + '/dist'), { map: { html: 'ejs' } }))
+app.use(views(path.resolve('./dist'), { map: { html: 'ejs' } }))
 // app.use(views(__dirname, {
 //   extension: 'ejs'
 // }))
 
 app.use(async ctx => {
-  let str = renderToString(<App></App>)
+  var str = renderToString(<App></App>)
   await ctx.render('index', {
     root: str
   })
