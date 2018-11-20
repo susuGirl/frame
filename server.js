@@ -4,11 +4,10 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import views from 'koa-views'
 import path from 'path'
-const router = require('koa-router')();  //注意：引入的方式
+// const router = require('koa-router')();  //注意：引入的方式
 import App from './src/views/App'
 // import First from './src/views/First'
 // import Second from './src/views/Second'
-
 const app = new Koa();
 
 // 将dist文件夹设置为静态路径
@@ -36,9 +35,8 @@ app.use(async ctx => {
 //   ctx.body=renderToString(<App><Second/></App>)
 // });
 
-
-app.use(router.routes()); //作用：启动路由
-app.use(router.allowedMethods()); // router.allowedMethods()用在了路由匹配router.routes()之后,所以在当所有路由中间件最后调用.此时根据ctx.status设置response响应头
+// app.use(router.routes()); //作用：启动路由
+// app.use(router.allowedMethods()); // router.allowedMethods()用在了路由匹配router.routes()之后,所以在当所有路由中间件最后调用.此时根据ctx.status设置response响应头
 // app.listen(8080,()=>{
 //   console.log("running at port 8080 ...");
 // });

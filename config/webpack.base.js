@@ -4,8 +4,8 @@ var HtmlwebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   // mode: 'development', // development 开发环境，production 生产环境
   entry: { // 入口配置
-    main1: './src/main.js',
-    main2: './src/main2.js'
+    main: './src/main.js',
+    server: './index.js'
   },
   output: { // 出口配置
     path: path.resolve(__dirname, '../dist'), // 打包后的文件存放的地方
@@ -26,7 +26,7 @@ module.exports = {
       title: '', // 指定其title
       template: 'ejs-compiled-loader!./src/index.html', // 指定要打包的html路径和文件名
       filename: 'index.html', // 指定输出路径和文件名
-      chunks: ['main1'], // 页面中所需要的js
+      chunks: ['main'], // 页面中所需要的js
       minify: {
         collapseWhitespace: true // 压缩选项
       }
