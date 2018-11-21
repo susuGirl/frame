@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config config/webpack.prod.js && webpack --config config/webpack.server.js",
     "buildServer": "webpack --config config/webpack.server.js",
-    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "start": "webpack-dev-server --config config/webpack.dev.js"
   },
   "babel": {
     "presets": [
