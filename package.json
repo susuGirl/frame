@@ -8,7 +8,6 @@
     "build": "webpack --config config/webpack.prod.js && webpack --config config/webpack.server.js",
     "buildServer": "webpack --config config/webpack.server.js",
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "ssh": "scp -r dist suyingxue@hpc.mofanglicai.com.cn:/home/suyingxue/wwwroot/web/rank"
   },
   "babel": {
     "presets": [
